@@ -1,0 +1,20 @@
+@use '../../scss/mixins';
+
+.text {
+  @include mixins.transition(background-size color);
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: var(--color-primary-hover);
+    background-size: 100% 2px;
+  }
+
+  &:active {
+    color: var(--color-primary-active);
+  }
+}

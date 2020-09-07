@@ -1,0 +1,10 @@
+@use '../../scss/units';
+
+.container {
+  padding: map-get(units.$size, container) map-get(units.$size, border);
+}
+
+.content {
+  max-width: map-get(units.$dim, contentWidth);
+  margin: auto;
+}

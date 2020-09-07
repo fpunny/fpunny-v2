@@ -1,0 +1,44 @@
+@use './env';
+
+$primary: env.$primary;
+$background: #ffffff;
+$heading: #424242;
+$text: lighten($heading, 30%);
+
+// Invertible colors
+$_colors: (
+  background: $background,
+  heading: $heading,
+  text: $text,
+);
+
+$colors: map-merge(
+  (
+    primary: $primary,
+  ),
+  $_colors
+);
+
+@mixin generate($tag, $color) {
+  --color-#{$tag}-highlight-active: #{rgba($color, 0.5)};
+  --color-#{$tag}-highlight: #{rgba($color, 0.1)};
+  --color-#{$tag}-active: #{darken($color, 16%)};
+  --color-#{$tag}-hover: #{darken($color, 8%)};
+  --color-#{$tag}: #{$color};
+}
+
+@mixin init {
+  :root {
+    @each $key, $val in $colors {
+      @include generate($key, $val);
+    }
+  }
+
+  :global() {
+    .dark {
+      @each $key, $val in $_colors {
+        @include generate($key, lighten(invert($val), 10%));
+      }
+    }
+  }
+}

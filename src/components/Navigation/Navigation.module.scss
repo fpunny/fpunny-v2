@@ -1,0 +1,66 @@
+@use '../../scss/mixins';
+@use '../../scss/units';
+
+.container {
+  align-items: center;
+  display: flex;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.svg {
+  margin-right: map-get(units.$size, element);
+  width: 1.4rem;
+  height: auto;
+}
+
+.button {
+  @include mixins.transition(background-color color);
+  background-color: transparent;
+  color: var(--color-heading);
+  justify-content: center;
+  border-radius: 999px;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  border: none;
+  height: 2rem;
+  width: 2rem;
+  padding: 0;
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-text-highlight);
+  }
+
+  &:active {
+    background-color: var(--color-primary-highlight);
+    color: var(--color-primary);
+  }
+}
+
+.icon {
+  @include mixins.transition(opacity);
+  fill: currentColor;
+  opacity: 0;
+  width: 50%;
+
+  &--show {
+    opacity: 1;
+  }
+
+  &--abs {
+    position: absolute;
+    margin: auto;
+    bottom: auto;
+    right: auto;
+    left: auto;
+    top: auto;
+  }
+}

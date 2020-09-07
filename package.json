@@ -1,0 +1,39 @@
+{
+  "name": "@fpunny/personal",
+  "private": true,
+  "description": "Personal website of Frederic Pun, a 4th year computer science students at the University of Toronto Scarborough. Learn more about this and the things I make at https://github.com/fpunny",
+  "version": "0.1.0",
+  "author": "Frederic Pun",
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "gatsby": "^2.24.53",
+    "gatsby-plugin-google-analytics": "^2.3.13",
+    "gatsby-plugin-manifest": "^2.4.27",
+    "gatsby-plugin-offline": "^3.2.26",
+    "gatsby-plugin-react-helmet": "^3.3.10",
+    "gatsby-plugin-react-svg": "^3.0.0",
+    "gatsby-plugin-sass": "^2.3.12",
+    "gatsby-source-contentful": "^2.3.41",
+    "gatsby-source-filesystem": "^2.3.27",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0",
+    "sass": "^1.26.10"
+  },
+  "devDependencies": {
+    "prettier": "2.0.5",
+    "pretty-quick": "^2.0.2"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,jsx,scss,mdx}\"",
+    "start": "npm run generate && GATSBY_GRAPHQL_IDE=playground gatsby develop",
+    "build": "npm run generate && gatsby build",
+    "serve": "npm run generate && gatsby serve",
+    "generate": "node ./codegen",
+    "clean": "gatsby clean"
+  }
+}

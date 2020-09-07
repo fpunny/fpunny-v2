@@ -1,0 +1,6 @@
+@use '../../scss/units';
+
+.container {
+  padding-bottom: map-get(units.$size, section);
+  padding-top: map-get(units.$size, section);
+}

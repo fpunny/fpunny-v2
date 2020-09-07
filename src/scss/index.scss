@@ -1,0 +1,35 @@
+@use './mixins';
+@use './colors';
+@use './fonts';
+
+@include colors.init;
+
+:global() {
+  html {
+    font-size: 18px;
+    @include mixins.media(tablet) {
+      font-size: 16px;
+    }
+
+    @include mixins.media(phone) {
+      font-size: 14px;
+    }
+  }
+
+  body {
+    @include mixins.transition(background-color slow);
+    background-color: var(--color-background);
+    scroll-behavior: smooth;
+    margin: 0;
+
+    &::-webkit-scrollbar {
+      height: 9px;
+      width: 9px;
+
+      &-thumb {
+        @include mixins.transition(background-color slow);
+        background-color: var(--color-heading);
+      }
+    }
+  }
+}

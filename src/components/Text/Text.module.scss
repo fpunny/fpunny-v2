@@ -1,0 +1,78 @@
+@use '../../scss/colors';
+@use '../../scss/mixins';
+@use '../../scss/env';
+
+$_types: (
+  splash: (
+    font-size: 4rem,
+    line-height: 1,
+    color: var(--color-heading),
+  ),
+  heading: (
+    font-size: 2.5rem,
+    line-height: 1.2,
+    color: var(--color-heading),
+  ),
+  subheading: (
+    font-size: 1.65rem,
+    line-height: 1.2,
+    color: var(--color-heading),
+  ),
+  body: (
+    font-size: 1.1rem,
+    line-height: 1.6,
+    color: var(--color-text),
+  ),
+  meta: (
+    font-size: 0.9rem,
+    color: var(--color-text),
+  ),
+);
+
+$_align: (
+  center: center,
+  right: right,
+  left: left,
+);
+
+$_transform: (
+  capitalize: capitalize,
+  uppercase: uppercase,
+  lowercase: lowercase,
+);
+
+.text {
+  @include mixins.transition(color, slow);
+  font-family: env.$font;
+  margin: 0;
+
+  &--bold {
+    font-weight: bold;
+  }
+}
+
+@each $tag, $config in $_types {
+  .text--type-#{$tag} {
+    @each $attr, $val in $config {
+      #{$attr}: $val;
+    }
+  }
+}
+
+@each $tag, $_ in colors.$colors {
+  .text--color-#{$tag} {
+    color: var(--color-#{$tag});
+  }
+}
+
+@each $tag, $val in $_align {
+  .text--align-#{$tag} {
+    text-align: $val;
+  }
+}
+
+@each $tag, $val in $_transform {
+  .text--transform-#{$tag} {
+    text-transform: $val;
+  }
+}

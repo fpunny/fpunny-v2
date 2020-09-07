@@ -1,0 +1,5 @@
+@use '../../scss/units';
+
+.heading {
+  margin-bottom: map-get(units.$size, element);
+}

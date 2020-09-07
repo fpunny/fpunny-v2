@@ -1,0 +1,30 @@
+@use '../../scss/mixins';
+@use '../../scss/units';
+
+.items {
+  grid-gap: map-get(units.$size, container);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  list-style-type: none;
+  display: grid;
+  padding: 0;
+
+  @include mixins.media(tablet) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include mixins.media(phone) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.item {
+  flex-direction: column;
+  display: flex;
+}
+
+.link {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: auto;
+  overflow: hidden;
+}
