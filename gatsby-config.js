@@ -47,7 +47,7 @@ module.exports = {
         short_name: `fpunny-site`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: process.env.GATSBY_PRIMARY_COLOR,
+        theme_color: process.env.PRIMARY_COLOR,
         display: `minimal-ui`,
         icon: `src/images/logo.svg`,
       },
