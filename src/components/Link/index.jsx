@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { OutboundLink } from 'gatsby-plugin-gtag';
 import { Link as NLink } from 'gatsby';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -28,7 +29,7 @@ export default function Link({ className, to: _to, mask, ...props }) {
   return (
     <Text
       className={classNames(styles.text, className)}
-      as={external ? `a` : NLink}
+      as={external ? OutboundLink : NLink}
       onMouseOver={watch}
       onFocus={watch}
       color='primary'

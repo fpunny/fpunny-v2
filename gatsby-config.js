@@ -13,9 +13,11 @@ module.exports = {
     `gatsby-plugin-react-svg`,
     `gatsby-plugin-offline`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-gtag`,
       options: {
         trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
+        anonymize: true,
+        head: false,
       },
     },
     {
@@ -50,6 +52,9 @@ module.exports = {
         theme_color: process.env.PRIMARY_COLOR,
         display: `minimal-ui`,
         icon: `src/images/logo.svg`,
+        icon_options: {
+          purpose: `maskable`,
+        },
       },
     },
   ],

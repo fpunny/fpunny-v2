@@ -56,5 +56,8 @@ Text.propTypes = {
   align: PropTypes.string,
   color: PropTypes.string,
   bold: PropTypes.bool,
-  as: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  as: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.func,
+  ]),
 };
