@@ -1,5 +1,6 @@
 const fs = require('fs/promises');
 const path = require('path');
+const fss = require('fs');
 require('dotenv').config();
 
 const IGNORE = [`index.js`];
@@ -29,6 +30,9 @@ const generate = (weight, files) => `
 `;
 
 module.exports = async function () {
+  if (!fss.existsSync(`./static`)) {
+    await fs.mkdir(`./static`);
+  }
   await fs.rmdir(STATIC, { recursive: true });
   await fs.mkdir(STATIC);
   const folders = await fs
