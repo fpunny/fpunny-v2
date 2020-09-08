@@ -7,7 +7,7 @@ export default function ThemeProvider({ children }) {
       const d = window.localStorage.getItem(`dark_mode`);
       if (d) {
         return d === `true`;
-      } else {
+      } else if (window.matchMedia) {
         return window.matchMedia('(prefers-color-scheme: dark)').matches;
       }
     }
