@@ -4,10 +4,14 @@ export const ThemeContext = React.createContext({});
 export default function ThemeProvider({ children }) {
   const themeState = useState(() => {
     if (typeof window !== `undefined`) {
-      return window.localStorage.getItem(`dark_mode`) === `true`;
-    } else {
-      return false;
+      const d = window.localStorage.getItem(`dark_mode`);
+      if (d) {
+        return d === `true`;
+      } else {
+        return window.matchMedia('(prefers-color-scheme: dark)').matches;
+      }
     }
+    return false;
   });
   const [dark] = themeState;
 
