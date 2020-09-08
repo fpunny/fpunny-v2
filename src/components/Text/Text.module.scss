@@ -42,7 +42,9 @@ $_transform: (
 );
 
 .text {
-  @include mixins.transition(color, slow);
+  :global(.animate) & {
+    @include mixins.transition(color, slow);
+  }
   font-family: env.$font;
   margin: 0;
 

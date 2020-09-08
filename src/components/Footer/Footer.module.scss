@@ -13,13 +13,19 @@
 }
 
 .button {
-  @include mixins.transition(background-color color);
+  :global(.animate) & {
+    @include mixins.transition(background-color color);
+  }
   background-color: var(--color-text-highlight);
   padding: map-get(units.$size, element);
   border-radius: 8px;
   margin-left: auto;
   cursor: pointer;
   border: none;
+
+  &:hover, &:active {
+    outline: none;
+  }
 
   &:hover,
   &:focus {

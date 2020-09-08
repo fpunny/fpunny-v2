@@ -16,8 +16,11 @@
     }
   }
 
+  :global(body.animate) {
+    @include mixins.transition(background-color, slow);
+  }
+
   body {
-    @include mixins.transition(background-color slow);
     background-color: var(--color-background);
     scroll-behavior: smooth;
     margin: 0;
@@ -27,7 +30,9 @@
       width: 9px;
 
       &-thumb {
-        @include mixins.transition(background-color slow);
+        :global(.animate) & {
+          @include mixins.transition(background-color, slow);
+        }
         background-color: var(--color-heading);
       }
     }

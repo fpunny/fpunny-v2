@@ -19,7 +19,9 @@
 }
 
 .button {
-  @include mixins.transition(background-color color);
+  :global(.animate) & {
+    @include mixins.transition(background-color color);
+  }
   background-color: transparent;
   color: var(--color-heading);
   justify-content: center;
@@ -27,12 +29,15 @@
   align-items: center;
   position: relative;
   cursor: pointer;
-  outline: none;
   display: flex;
   border: none;
   height: 2rem;
   width: 2rem;
   padding: 0;
+
+  &:hover, &:active {
+    outline: none;
+  }
 
   &:hover,
   &:focus {

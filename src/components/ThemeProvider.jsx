@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-
 export const ThemeContext = React.createContext({});
 
 export default function ThemeProvider({ children }) {
@@ -11,6 +10,12 @@ export default function ThemeProvider({ children }) {
     }
   });
   const [dark] = themeState;
+
+  useEffect(() => {
+    window.setTimeout(() => {
+      document.body.classList.add(`animate`);
+    });
+  }, []);
 
   useEffect(() => {
     if (dark) {
