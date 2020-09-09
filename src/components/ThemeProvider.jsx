@@ -13,22 +13,18 @@ export default function ThemeProvider({ children }) {
     }
     return false;
   });
+
   const [dark] = themeState;
-
   useEffect(() => {
-    window.setTimeout(() => {
-      document.body.classList.add(`animate`);
-    });
-  }, []);
-
-  useEffect(() => {
+    const d = document.body.classList;
     if (dark) {
       window.localStorage.setItem(`dark_mode`, true);
-      document.body.classList.add(`dark`);
+      d.add(`dark`);
     } else {
       window.localStorage.setItem(`dark_mode`, false);
-      document.body.classList.remove(`dark`);
+      d.remove(`dark`);
     }
+    window.setTimeout(() => d.add(`animate`));
   }, [dark]);
 
   return (

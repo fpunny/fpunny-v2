@@ -28,7 +28,7 @@ export default function Link({ className, to: _to, mask, ...props }) {
 
   return (
     <Text
-      className={classNames(styles.text, className)}
+      className={classNames(styles.link, className)}
       as={external ? OutboundLink : NLink}
       onMouseOver={watch}
       onFocus={watch}
