@@ -4,7 +4,6 @@
   :global(.animate) & {
     @include mixins.transition(background-size color);
   }
-  @include mixins.transition(background-size color);
   background-image: linear-gradient(currentColor, currentColor);
   background-position: 0% 100%;
   background-repeat: no-repeat;

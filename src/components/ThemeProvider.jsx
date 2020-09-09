@@ -16,18 +16,24 @@ export default function ThemeProvider({ children }) {
 
   const [dark] = themeState;
   useEffect(() => {
-    const d = document.body.classList;
     if (dark) {
       window.localStorage.setItem(`dark_mode`, true);
-      d.add(`dark`);
+      document.body.classList.add(`dark`);
     } else {
       window.localStorage.setItem(`dark_mode`, false);
-      d.remove(`dark`);
+      document.body.classList.remove(`dark`);
     }
-    window.setTimeout(() => d.add(`animate`));
+    
+    if (!document.body.classList.contains(`animate`)) {
+      window.setTimeout(() => {
+        document.body.classList.add(`animate`);
+      }, 0);
+    }
   }, [dark]);
 
   return (
-    <ThemeContext.Provider value={themeState}>{children}</ThemeContext.Provider>
+    <ThemeContext.Provider value={themeState}>
+      {children}
+    </ThemeContext.Provider>
   );
 }
