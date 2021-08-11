@@ -17,20 +17,6 @@ export default function About() {
       <ul className={styles.items}>
         <li>
           <Text className={styles.heading} type='subheading' as='h3'>
-            <span role='img' aria-label='graduation hat'>
-              🎓
-            </span>{' '}
-            University Student
-          </Text>
-          <Text type='body'>
-            I'm currently studying computer science at the University of Toronto
-            Scarborough. I help organize{' '}
-            <Link to='https://hackthevalley.io'>Hack the Valley</Link>, and a
-            teaching assistant for Software Design.
-          </Text>
-        </li>
-        <li>
-          <Text className={styles.heading} type='subheading' as='h3'>
             <span role='img' aria-label='laptop'>
               💻
             </span>{' '}
@@ -38,10 +24,22 @@ export default function About() {
           </Text>
           <Text type='body'>
             I'm currently a developer at{' '}
-            <Link to='https://247studios.ca'>247studios</Link>. Some of my
-            volunteer work include: mentoring at{' '}
-            <Link to='https://ellehacks.com'>Ellehacks</Link>, and developing
-            web apps for <Link to='https://hackthe6ix.com'>Hack the 6ix</Link>.
+            <Link to='https://247studios.ca'>247studios</Link>, and at{' '}
+            <Link to='https://konrad.com'>247studios</Link>. Where I work with clients
+            to create maintainable and performant web applications.
+          </Text>
+        </li>
+        <li>
+          <Text className={styles.heading} type='subheading' as='h3'>
+            <span role='img' aria-label='graduation hat'>
+              🎓
+            </span>{' '}
+            Hackathon Enthusiast
+          </Text>
+          <Text type='body'>
+            Giving back to my community, I work with local hackathons by providing development work at{' '}
+            <Link to='https://hackthevalley.io'>Hack the Valley</Link>, and{' '}
+            <Link to='https://hackthe6ix.com'>Hack the 6ix</Link>
           </Text>
         </li>
         <li>
@@ -53,7 +51,7 @@ export default function About() {
           </Text>
           <Text type='body'>
             When I'm not developing, one of my hobbies is rock climbing. My go
-            to rock climbing gym is @ Pan Am Sports Centre.
+            to rock climbing gym is @ True North Climbing.
           </Text>
         </li>
       </ul>
