@@ -10,7 +10,7 @@ export default function Landing() {
         Frederic Pun
       </Text>
       <Text type='subheading' color='primary'>
-        Full Stack Developer | 4th Year CS @ UofT
+        Associate Software Developer @ Konrad
       </Text>
     </Section>
   );
