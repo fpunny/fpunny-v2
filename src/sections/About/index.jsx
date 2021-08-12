@@ -25,7 +25,7 @@ export default function About() {
           <Text type='body'>
             I'm currently a developer at{' '}
             <Link to='https://247studios.ca'>247studios</Link>, and at{' '}
-            <Link to='https://konrad.com'>247studios</Link>. Where I work with clients
+            <Link to='https://konrad.com'>Konrad Group</Link>. Where I work with clients
             to create maintainable and performant web applications.
           </Text>
         </li>
