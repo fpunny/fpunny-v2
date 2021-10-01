@@ -1,7 +1,7 @@
 {
   "name": "@fpunny/personal",
   "private": true,
-  "description": "Personal website of Frederic Pun, a 4th year computer science students at the University of Toronto Scarborough. Learn more about this and the things I make at https://github.com/fpunny",
+  "description": "Personal website of Frederic Pun, an associate software developer at Konrad and a graduate from University of Toronto Scarborough specializing in software design. Learn more about this and the things I make at https://github.com/fpunny",
   "version": "0.1.0",
   "author": "Frederic Pun",
   "dependencies": {
