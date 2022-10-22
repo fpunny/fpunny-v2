@@ -51,7 +51,7 @@ export default function About() {
           </Text>
           <Text type='body'>
             When I'm not developing, one of my hobbies is rock climbing. My go
-            to rock climbing gym is @ True North Climbing.
+            to rock climbing gym is @ True North Climbing + Basecamp.
           </Text>
         </li>
       </ul>
