@@ -10,7 +10,7 @@ export default function Landing() {
         Frederic Pun
       </Text>
       <Text type='subheading' color='primary'>
-        Associate Software Developer @ Konrad
+        Software Developer @ Konrad
       </Text>
     </Section>
   );
