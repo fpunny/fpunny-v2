@@ -23,10 +23,9 @@ export default function About() {
             Software Developer
           </Text>
           <Text type='body'>
-            I'm currently a developer at{' '}
-            <Link to='https://konrad.com'>Konrad Group</Link> (Full-time), and at{' '}
-            <Link to='https://247studios.ca'>247studios</Link> (Part-time). Where I
-            work with clients to create maintainable and performant web applications.
+            I'm currently a full-stack software engineer at{' '}
+            <Link to='https://meraki.cisco.com'>Cisco Meraki</Link>. Where I
+            build performant and elegant web applications.
           </Text>
         </li>
         <li>
@@ -51,7 +50,7 @@ export default function About() {
           </Text>
           <Text type='body'>
             When I'm not developing, one of my hobbies is rock climbing. My go
-            to rock climbing gym is @ True North Climbing + Basecamp.
+            to rock climbing gym is @ Basecamp.
           </Text>
         </li>
       </ul>
